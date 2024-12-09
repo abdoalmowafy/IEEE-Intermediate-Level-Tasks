@@ -1,0 +1,5 @@
+setInterval(function, timePeriod)
+Execute function every timePeriod async
+
+setTimeout(function, timePeriod)
+Execute function once after timePeriod async

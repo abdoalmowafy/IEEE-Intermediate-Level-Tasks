@@ -6,7 +6,7 @@ document.querySelector('form').addEventListener('submit', function (e) {
     const firstName = document.querySelector('input[name="firstName"]');
     const lastName = document.querySelector('input[name="lastName"]');
     const phone = document.querySelector('input[name="phone"]');
-    const gender = document.querySelectorAll('select[name="gender"]');
+    const gender = document.querySelector('select[name="gender"]');
     const password = document.querySelector('input[name="password"]');
     const confirmPassword = document.querySelector('input[name="confirmPassword"]');
 
@@ -26,12 +26,8 @@ document.querySelector('form').addEventListener('submit', function (e) {
         document.querySelector('.error[for="phone"]').innerHTML = 'Phone Number is invalid.';
         errors = true;
     }
-    if (!gender.value) {
-        document.querySelector('.error[for="gender"]').innerHTML = 'Gender is required.';
-        errors = true;
-    }
     if (["male", "female"].includes(gender.value)) {
-        document.querySelector('.error[for="gender"]').innerHTML = 'Gender is invalid.';
+        document.querySelector('.error[for="gender"]').innerHTML = 'Gender is Required.';
         errors = true;
     }
     if (!password.value.trim()) {

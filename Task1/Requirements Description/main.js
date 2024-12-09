@@ -49,6 +49,12 @@ document.querySelector('form').addEventListener('submit', function (e) {
 
     if (!errors) {
         this.submit();
+        console.log('firstName: ' + firstName.value);
+        console.log('lastName: ' + lastName.value);
+        console.log('phone: ' + phone.value);
+        console.log('gender: ' + gender.value);
+        console.log('password: ' + password.value);
+        console.log('consent: ' + document.querySelector('input[name="consent"]').value);
         alert('Form submitted successfully!');
     }
 });
